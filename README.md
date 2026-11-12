@@ -22,6 +22,7 @@ The project audits scored agent-submission ZIPs before treating leaderboard diff
 - Ten records matched the 28-tool-call / 8-minute / 4,096-thinking envelope. Nine had an 8,192-token output cap and one had 16,384.
 - Two later one-factor submissions scored 0.12 (output cap 16,384) and 0.15 (thinking budget 2,048). Each is one observation, not an estimate of an expected score.
 - The inspected adapter package had zero-valued LoRA-B matrices, so its standard LoRA update was zero. This applies to that package only.
+- Across 16 exploratory factor contrasts, the lowest nominal exact-permutation p-value was 0.0357; after Bonferroni and Benjamini–Hochberg adjustment, both values were 0.5714. No contrast survives correction.
 
 All configuration contrasts are observational and confounded. The paper does not claim a causal setting effect or a superior agent.
 
@@ -41,6 +42,8 @@ All configuration contrasts are observational and confounded. The paper does not
 │   ├── data/               # Aggregate case-study data and demo manifest
 │   ├── examples/           # Synthetic demo ZIP
 │   └── tests/              # Unit tests
+├── research_dataset/       # CC BY 4.0 dataset, data card, schemas, notebook, tests
+├── releases/               # Standalone dataset + audit-tool release ZIP
 ├── analysis/               # Recomputed descriptive summary
 └── docs/                   # Evidence ledger, figure notes, Kaggle + GitHub guides
 ```
@@ -90,7 +93,7 @@ The inspector reads supported SafeTensors dtypes using Python's standard library
 
 ## Reproducible notebook
 
-Open [`notebooks/ASFA_Reproducible_Audit.ipynb`](notebooks/ASFA_Reproducible_Audit.ipynb) in Kaggle or Jupyter. The notebook embeds the aggregate tables and a synthetic ZIP example; it does not require network access or private source archives.
+Open [`notebooks/ASFA_Reproducible_Audit.ipynb`](notebooks/ASFA_Reproducible_Audit.ipynb) in Kaggle or Jupyter. The v1.1 notebook embeds aggregate tables, recomputes 16 exploratory contrasts with Bonferroni and Benjamini–Hochberg adjustments, and includes a synthetic ZIP example. It does not require network access or private source archives. The standalone resource release is [`releases/ASFA_Public_Research_Dataset_and_Tool_v1_1.zip`](releases/ASFA_Public_Research_Dataset_and_Tool_v1_1.zip).
 
 ## Data provenance and limitations
 

@@ -1,0 +1,33 @@
+{
+  "title": "ASFA Public Research Dataset v1.1",
+  "version": "1.1.0",
+  "release_date": "2026-11-12",
+  "records": {
+    "historical_submission_records": 14,
+    "distinct_extracted_payloads": 12,
+    "factor_payload_rows": 8,
+    "exploratory_factor_contrasts": 16,
+    "single_run_followups": 2,
+    "unit_tests_passed": 14
+  },
+  "baseline_payload_scores": [
+    0.15,
+    0.17,
+    0.2
+  ],
+  "multiple_testing": {
+    "smallest_nominal_p": 0.03571428571428571,
+    "bonferroni_adjusted_p": 0.5714285714285714,
+    "bh_adjusted_q": 0.5714285714285714,
+    "survives_0_05": false
+  },
+  "score_conversion_assumption": {
+    "task_count": 58,
+    "rounding": "floor to 2 decimals",
+    "officially_confirmed": false
+  },
+  "data_license": "CC BY 4.0",
+  "code_license": "Apache-2.0",
+  "raw_submission_archives_included": false,
+  "experiment_protocol_template_included": true
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ASFA Preregistered Agent Experiment Card",
+  "type": "object",
+  "required": ["experiment_id", "status", "hypothesis", "baseline", "treatment", "evaluation", "decision_rule"],
+  "properties": {
+    "experiment_id": {"type": "string", "minLength": 1},
+    "status": {"enum": ["planned", "running", "completed", "aborted"]},
+    "hypothesis": {"type": "string", "minLength": 20},
+    "baseline": {"type": "object", "required": ["artifact_sha256", "model_id", "harness_version", "evaluation_config_sha256"]},
+    "treatment": {"type": "object", "required": ["candidate_artifact_sha256", "single_changed_factor", "baseline_value", "candidate_value", "unchanged_components"]},
+    "evaluation": {"type": "object", "required": ["task_split", "primary_metric", "repetitions_per_arm", "random_seed_policy", "run_order", "evaluator_receipt"], "properties": {"repetitions_per_arm": {"type": "integer", "minimum": 1}}},
+    "decision_rule": {"type": "object", "required": ["minimum_practical_effect", "promotion_rule", "analysis_plan"], "properties": {"minimum_practical_effect": {"type": "number", "minimum": 0}}}
+  }
+}

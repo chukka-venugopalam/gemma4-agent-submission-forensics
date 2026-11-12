@@ -62,8 +62,21 @@ def analyze():
             "n_with": len(yes), "n_without": len(no),
             "mean_with": round(mean(yes), 2), "mean_without": round(mean(no), 2),
             "difference": round(diff, 2), "heuristic_interval": [round(diff-half_width, 2), round(diff+half_width, 2)],
-            "exact_nominal_permutation_p": round(permutation_p(values, flags), 3),
+            "exact_nominal_permutation_p": permutation_p(values, flags),
         }
+    # Adjust the family of exploratory p-values for multiple comparisons.
+    ordered_p = sorted(
+        ((key, value["exact_nominal_permutation_p"]) for key, value in contrasts.items()),
+        key=lambda item: item[1],
+    )
+    m = len(ordered_p)
+    next_q = 1.0
+    for rank in range(m, 0, -1):
+        key, p_value = ordered_p[rank - 1]
+        next_q = min(next_q, p_value * m / rank)
+        contrasts[key]["bonferroni_adjusted_p"] = min(1.0, p_value * m)
+        contrasts[key]["benjamini_hochberg_q"] = min(1.0, next_q)
+
     result = {
         "archive_records": len(archives), "distinct_payloads": len(fps),
         "baseline_same_payload_scores": [float(r["displayed_score"]) for r in baseline],

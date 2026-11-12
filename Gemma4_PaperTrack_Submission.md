@@ -98,11 +98,11 @@ Ten archive records match the core 28-call/eight-minute/4,096-thinking envelope;
 
 ### 5.3 No small factor is established inside the core envelope
 
-Across eight distinct payloads in the core envelope, 15 of 16 heuristic normal intervals include zero (Figure 4). The sole interval that narrowly excludes zero is the bundled combination of 100 turns and a 300-second command timeout (+3.11 solves, heuristic interval approximately +0.09 to +6.13; exact nominal permutation p=0.036). It is based on only two payloads in the “with” group and changes two settings together. It is the smallest p-value among 16 comparisons; under an illustrative independence assumption, the chance of at least one p-value this small under a global null is about 44%. The intervals are not calibrated small-sample confidence intervals, the tests are not independent, and the result is exploratory rather than confirmatory. Graph tools and temperature 0.2 show small positive point estimates, but their intervals also include zero. No factor has demonstrated a reliable improvement.
+Across eight distinct payloads in the core envelope, 15 of 16 heuristic normal intervals include zero (Figure 4). The sole interval that narrowly excludes zero is the bundled combination of 100 turns and a 300-second command timeout (+3.11 solves, heuristic interval approximately +0.09 to +6.13; exact nominal permutation p=0.0357). It is based on only two payloads in the “with” group and changes two settings together. Because 16 exploratory contrasts were tested, we also adjust for multiple comparisons: the smallest Bonferroni-adjusted p-value is 0.5714 and the smallest Benjamini-Hochberg q-value is 0.5714. No contrast survives either adjustment at 0.05. These corrections do not remove confounding, feature dependence, or the limitations of eight payloads; the nominal signal is hypothesis-generating only. The intervals are not calibrated small-sample confidence intervals. Graph tools and temperature 0.2 show small positive point estimates, but their intervals also include zero. No factor has demonstrated a reliable improvement.
 
 ![Figure 4. Exploratory factor intervals](figures/fig4_factor_intervals.png)
 
-*Figure 4. Fifteen of 16 heuristic intervals cross zero; the lone marginal contrast bundles turn count and timeout and is uncorrected.*
+*Figure 4. Fifteen of 16 heuristic intervals cross zero; the one bundled contrast is only nominally positive and does not survive multiple-testing adjustment.*
 
 ### 5.4 Two one-factor follow-ups did not beat the baseline draw
 
@@ -162,4 +162,4 @@ The best observed score in this case study was 0.20, but the same extracted agen
 
 ## Reproducibility note
 
-The companion `Agent_Submission_Forensics_Audit` resource contains the archive-audit CLI, a standard-library SafeTensors adapter inspector, a 14-row aggregate observation manifest, unit tests, and a reproduction guide. The submitted tool does not contain hidden test data, task snapshots, or model weights. The analysis uses participant-owned submission artifacts and public leaderboard observations. The resource is a static-archive auditor; it does not run Gemma, reproduce hidden tests, or infer private leaderboard outcomes.
+The companion Agent Submission Forensics Audit (ASFA) release includes the archive-audit CLI, a machine-readable 14-record submission dataset, 12-payload deduplication table, eight-payload factor matrix, follow-up trial records, multiple-testing-adjusted contrasts, data card, schemas, unit tests, and a runnable synthetic demo. The self-contained notebook reproduces the summary analysis without network access or private archives. The resource contains no hidden test data, task snapshots, or model weights. It does not run Gemma, reproduce hidden tests, or infer private leaderboard outcomes.

@@ -22,7 +22,14 @@ class CaseStudyTests(unittest.TestCase):
     def test_exploratory_bundled_contrast(self):
         r = case.analyze()["factor_contrasts"]["max_turns_100_timeout_300"]
         self.assertEqual(r["difference"], 3.11)
-        self.assertEqual(r["exact_nominal_permutation_p"], 0.036)
+        self.assertAlmostEqual(r["exact_nominal_permutation_p"], 0.0357142857, places=8)
+        self.assertAlmostEqual(r["bonferroni_adjusted_p"], 0.5714285714, places=8)
+        self.assertAlmostEqual(r["benjamini_hochberg_q"], 0.5714285714, places=8)
+
+    def test_no_factor_survives_multiple_testing_adjustment(self):
+        r = case.analyze()["factor_contrasts"]
+        self.assertTrue(all(x["bonferroni_adjusted_p"] >= 0.05 for x in r.values()))
+        self.assertTrue(all(x["benjamini_hochberg_q"] >= 0.05 for x in r.values()))
 
     def test_followup_scores(self):
         r = case.analyze()

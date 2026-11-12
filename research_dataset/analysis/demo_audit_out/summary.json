@@ -1,0 +1,8 @@
+{
+  "records": 1,
+  "distinct_payloads": 1,
+  "duplicate_groups": 0,
+  "task_count_assumption": 58,
+  "score_mapping_note": "Solve counts are compatible with floor-truncated displayed scores; verify denominator and display rule for the target competition.",
+  "causal_note": "This utility fingerprints and inventories artifacts. It does not establish causal effects from observational submission scores."
+}

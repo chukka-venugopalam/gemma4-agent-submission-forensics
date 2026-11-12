@@ -1,0 +1,276 @@
+{
+  "archive_records": 14,
+  "distinct_payloads": 12,
+  "baseline_same_payload_scores": [
+    0.15,
+    0.17,
+    0.2
+  ],
+  "baseline_same_payload_solves_n58": [
+    9,
+    10,
+    12
+  ],
+  "core_envelope": {
+    "definition": "max_tool_calls=28, max_time_minutes=8, thinking_budget=4096",
+    "records": 10,
+    "distinct_payloads": 8,
+    "mean_solves_n58": 9,
+    "sd_solve_counts": 1.89,
+    "output_cap_counts": {
+      "16384": 1,
+      "8192": 9
+    }
+  },
+  "outside_core_envelope": {
+    "records": 4,
+    "solve_counts_n58": [
+      0,
+      2,
+      4,
+      4
+    ],
+    "mean_solves_n58": 2.5
+  },
+  "factor_contrasts": {
+    "graph_tools_declared": {
+      "n_with": 4,
+      "n_without": 4,
+      "mean_with": 9.25,
+      "mean_without": 8.08,
+      "difference": 1.17,
+      "heuristic_interval": [
+        -1.45,
+        3.78
+      ],
+      "exact_nominal_permutation_p": 0.4,
+      "bonferroni_adjusted_p": 1.0,
+      "benjamini_hochberg_q": 0.8571428571428571
+    },
+    "temperature_0_2": {
+      "n_with": 5,
+      "n_without": 3,
+      "mean_with": 9.0,
+      "mean_without": 8.11,
+      "difference": 0.89,
+      "heuristic_interval": [
+        -1.81,
+        3.59
+      ],
+      "exact_nominal_permutation_p": 0.5178571428571429,
+      "bonferroni_adjusted_p": 1.0,
+      "benjamini_hochberg_q": 0.8838095238095238
+    },
+    "max_turns_100_timeout_300": {
+      "n_with": 2,
+      "n_without": 6,
+      "mean_with": 11.0,
+      "mean_without": 7.89,
+      "difference": 3.11,
+      "heuristic_interval": [
+        0.09,
+        6.13
+      ],
+      "exact_nominal_permutation_p": 0.03571428571428571,
+      "bonferroni_adjusted_p": 0.5714285714285714,
+      "benjamini_hochberg_q": 0.5714285714285714
+    },
+    "has_sub_agent": {
+      "n_with": 1,
+      "n_without": 7,
+      "mean_with": 8.0,
+      "mean_without": 8.76,
+      "difference": -0.76,
+      "heuristic_interval": [
+        -4.71,
+        3.19
+      ],
+      "exact_nominal_permutation_p": 1.0,
+      "bonferroni_adjusted_p": 1.0,
+      "benjamini_hochberg_q": 1.0
+    },
+    "prompt_over_4KB": {
+      "n_with": 6,
+      "n_without": 2,
+      "mean_with": 8.5,
+      "mean_without": 9.17,
+      "difference": -0.67,
+      "heuristic_interval": [
+        -3.68,
+        2.35
+      ],
+      "exact_nominal_permutation_p": 0.6785714285714286,
+      "bonferroni_adjusted_p": 1.0,
+      "benjamini_hochberg_q": 0.8838095238095238
+    },
+    "hard_edit_by_12": {
+      "n_with": 3,
+      "n_without": 5,
+      "mean_with": 8.44,
+      "mean_without": 8.8,
+      "difference": -0.36,
+      "heuristic_interval": [
+        -3.05,
+        2.34
+      ],
+      "exact_nominal_permutation_p": 0.7678571428571429,
+      "bonferroni_adjusted_p": 1.0,
+      "benjamini_hochberg_q": 0.8838095238095238
+    },
+    "soft_edit_by_12": {
+      "n_with": 2,
+      "n_without": 6,
+      "mean_with": 7.5,
+      "mean_without": 9.06,
+      "difference": -1.56,
+      "heuristic_interval": [
+        -4.57,
+        1.46
+      ],
+      "exact_nominal_permutation_p": 0.42857142857142855,
+      "bonferroni_adjusted_p": 1.0,
+      "benjamini_hochberg_q": 0.8571428571428571
+    },
+    "anti_repetition_rules": {
+      "n_with": 4,
+      "n_without": 4,
+      "mean_with": 9.25,
+      "mean_without": 8.08,
+      "difference": 1.17,
+      "heuristic_interval": [
+        -1.45,
+        3.78
+      ],
+      "exact_nominal_permutation_p": 0.4,
+      "bonferroni_adjusted_p": 1.0,
+      "benjamini_hochberg_q": 0.8571428571428571
+    },
+    "status_90s_rule": {
+      "n_with": 4,
+      "n_without": 4,
+      "mean_with": 8.08,
+      "mean_without": 9.25,
+      "difference": -1.17,
+      "heuristic_interval": [
+        -3.78,
+        1.45
+      ],
+      "exact_nominal_permutation_p": 0.4,
+      "bonferroni_adjusted_p": 1.0,
+      "benjamini_hochberg_q": 0.8571428571428571
+    },
+    "one_check_then_stop": {
+      "n_with": 4,
+      "n_without": 4,
+      "mean_with": 8.33,
+      "mean_without": 9.0,
+      "difference": -0.67,
+      "heuristic_interval": [
+        -3.28,
+        1.95
+      ],
+      "exact_nominal_permutation_p": 0.8285714285714286,
+      "bonferroni_adjusted_p": 1.0,
+      "benjamini_hochberg_q": 0.8838095238095238
+    },
+    "never_bare_pytest": {
+      "n_with": 4,
+      "n_without": 4,
+      "mean_with": 8.08,
+      "mean_without": 9.25,
+      "difference": -1.17,
+      "heuristic_interval": [
+        -3.78,
+        1.45
+      ],
+      "exact_nominal_permutation_p": 0.4,
+      "bonferroni_adjusted_p": 1.0,
+      "benjamini_hochberg_q": 0.8571428571428571
+    },
+    "evidence_ledger": {
+      "n_with": 1,
+      "n_without": 7,
+      "mean_with": 7.0,
+      "mean_without": 8.9,
+      "difference": -1.9,
+      "heuristic_interval": [
+        -5.86,
+        2.05
+      ],
+      "exact_nominal_permutation_p": 0.625,
+      "bonferroni_adjusted_p": 1.0,
+      "benjamini_hochberg_q": 0.8838095238095238
+    },
+    "test_obligations": {
+      "n_with": 1,
+      "n_without": 7,
+      "mean_with": 7.0,
+      "mean_without": 8.9,
+      "difference": -1.9,
+      "heuristic_interval": [
+        -5.86,
+        2.05
+      ],
+      "exact_nominal_permutation_p": 0.625,
+      "bonferroni_adjusted_p": 1.0,
+      "benjamini_hochberg_q": 0.8838095238095238
+    },
+    "call_checkpoints_20_24": {
+      "n_with": 1,
+      "n_without": 7,
+      "mean_with": 11.0,
+      "mean_without": 8.33,
+      "difference": 2.67,
+      "heuristic_interval": [
+        -1.28,
+        6.62
+      ],
+      "exact_nominal_permutation_p": 0.25,
+      "bonferroni_adjusted_p": 1.0,
+      "benjamini_hochberg_q": 0.8571428571428571
+    },
+    "reproduce_step": {
+      "n_with": 4,
+      "n_without": 4,
+      "mean_with": 9.0,
+      "mean_without": 8.33,
+      "difference": 0.67,
+      "heuristic_interval": [
+        -1.95,
+        3.28
+      ],
+      "exact_nominal_permutation_p": 0.8285714285714286,
+      "bonferroni_adjusted_p": 1.0,
+      "benjamini_hochberg_q": 0.8838095238095238
+    },
+    "graph_tool_guidance": {
+      "n_with": 3,
+      "n_without": 5,
+      "mean_with": 9.67,
+      "mean_without": 8.07,
+      "difference": 1.6,
+      "heuristic_interval": [
+        -1.1,
+        4.3
+      ],
+      "exact_nominal_permutation_p": 0.30357142857142855,
+      "bonferroni_adjusted_p": 1.0,
+      "benjamini_hochberg_q": 0.8571428571428571
+    }
+  },
+  "followup_trials": [
+    {
+      "experiment": "I02",
+      "score": 0.12,
+      "repeats": 1,
+      "interpretation": "single public-score draw; no demonstrated benefit"
+    },
+    {
+      "experiment": "B2",
+      "score": 0.15,
+      "repeats": 1,
+      "interpretation": "single public-score draw; no demonstrated benefit"
+    }
+  ],
+  "caveat": "58-task conversion is participant-derived; features are observational. Intervals are heuristic plug-in normal intervals, not calibrated confidence intervals. Factor contrasts use eight distinct payload means and are not randomized or causal. Follow-ups have one run per arm."
+}

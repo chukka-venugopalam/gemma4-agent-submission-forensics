@@ -1,0 +1,31 @@
+{
+  "experiment_id": "EXP-YYYY-NNN",
+  "status": "planned",
+  "hypothesis": "State the specific mechanism expected to change the primary outcome.",
+  "baseline": {
+    "artifact_sha256": "REPLACE_WITH_64_HEX_SHA256",
+    "model_id": "RECORD_EXACT_MODEL_ID",
+    "harness_version": "RECORD_EXACT_VERSION_OR_UNKNOWN",
+    "evaluation_config_sha256": "REPLACE_WITH_64_HEX_SHA256"
+  },
+  "treatment": {
+    "candidate_artifact_sha256": "REPLACE_WITH_64_HEX_SHA256",
+    "single_changed_factor": "ONE_PARAMETER_OR_COMPONENT",
+    "baseline_value": "VALUE",
+    "candidate_value": "VALUE",
+    "unchanged_components": ["prompt", "tools", "model", "sampling", "budget"]
+  },
+  "evaluation": {
+    "task_split": "PUBLIC_OR_PRIVATE_AS_APPLICABLE",
+    "primary_metric": "PASS_RATE_OR_SOLVED_TASK_COUNT",
+    "repetitions_per_arm": 5,
+    "random_seed_policy": "RECORD_IF_AVAILABLE",
+    "run_order": "RANDOMIZED_OR_EXPLAIN_WHY_NOT",
+    "evaluator_receipt": "LINK_OR_RUN_ID_OR_UNKNOWN"
+  },
+  "decision_rule": {
+    "minimum_practical_effect": 0.02,
+    "promotion_rule": "Promote only if the preregistered repeated comparison meets the stated threshold and no safety or validity gate fails.",
+    "analysis_plan": "Report every run, uncertainty, exclusions, and all planned comparisons. Correct for multiple comparisons when testing multiple factors."
+  }
+}

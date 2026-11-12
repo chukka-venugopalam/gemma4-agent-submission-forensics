@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Please cite the ASFA paper and dataset when reusing this resource."
+title: "ASFA Public Research Dataset and Audit Utility"
+authors:
+  - family-names: Venugopalam
+    given-names: Chukka
+version: 1.1.0
+date-released: 2026-11-12
+license: CC-BY-4.0

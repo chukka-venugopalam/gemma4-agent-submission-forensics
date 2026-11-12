@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ASFA historical submission record",
+  "type": "object",
+  "required": [
+    "record_id",
+    "archive",
+    "displayed_score",
+    "archive_sha256",
+    "content_fingerprint",
+    "score_task_count_assumption",
+    "score_rounding_assumption"
+  ],
+  "properties": {
+    "record_id": {
+      "type": "string",
+      "pattern": "^H[0-9]{2}$"
+    },
+    "archive": {
+      "type": "string"
+    },
+    "displayed_score": {
+      "type": "number"
+    },
+    "archive_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "content_fingerprint": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "score_task_count_assumption": {
+      "type": "integer",
+      "const": 58
+    },
+    "solve_count_is_assumption": {
+      "type": "string",
+      "enum": [
+        "true"
+      ]
+    },
+    "score_rounding_assumption": {
+      "type": "string",
+      "const": "floor_to_2_decimals"
+    }
+  },
+  "additionalProperties": true
+}

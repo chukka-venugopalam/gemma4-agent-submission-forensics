@@ -1,0 +1,71 @@
+{
+  "archive": "score-0.13(1).zip",
+  "adapters": [
+    {
+      "file": "adapter-0.safetensors",
+      "size_bytes": 217672,
+      "sha256": "dcbedd989af34f5201a39606e0bd4014d351a29162dd96da418782cbbe487ad9",
+      "tensor_count": 4,
+      "lora_B_tensors": [
+        {
+          "name": "base_model.model.model.language_model.layers.0.self_attn.o_proj.lora_B.weight",
+          "dtype": "BF16",
+          "shape": [
+            5376,
+            4
+          ],
+          "nonzero": 0,
+          "elements": 21504,
+          "all_zero": true
+        },
+        {
+          "name": "base_model.model.model.language_model.layers.0.self_attn.q_proj.lora_B.weight",
+          "dtype": "BF16",
+          "shape": [
+            8192,
+            4
+          ],
+          "nonzero": 0,
+          "elements": 32768,
+          "all_zero": true
+        }
+      ],
+      "all_lora_B_zero": true,
+      "effective_standard_lora_update_zero": true,
+      "archive_member": "adapters/main_lora/adapter_model.safetensors"
+    },
+    {
+      "file": "adapter-1.safetensors",
+      "size_bytes": 217672,
+      "sha256": "dcbedd989af34f5201a39606e0bd4014d351a29162dd96da418782cbbe487ad9",
+      "tensor_count": 4,
+      "lora_B_tensors": [
+        {
+          "name": "base_model.model.model.language_model.layers.0.self_attn.o_proj.lora_B.weight",
+          "dtype": "BF16",
+          "shape": [
+            5376,
+            4
+          ],
+          "nonzero": 0,
+          "elements": 21504,
+          "all_zero": true
+        },
+        {
+          "name": "base_model.model.model.language_model.layers.0.self_attn.q_proj.lora_B.weight",
+          "dtype": "BF16",
+          "shape": [
+            8192,
+            4
+          ],
+          "nonzero": 0,
+          "elements": 32768,
+          "all_zero": true
+        }
+      ],
+      "all_lora_B_zero": true,
+      "effective_standard_lora_update_zero": true,
+      "archive_member": "adapters/tool_lora/adapter_model.safetensors"
+    }
+  ]
+}
