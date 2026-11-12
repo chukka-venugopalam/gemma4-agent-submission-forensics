@@ -1,0 +1,9 @@
+payload_group,archive_labels,solves_mean,score_records,graph_tools_declared,temperature_0_2,max_turns_100_timeout_300,has_sub_agent,prompt_over_4KB,hard_edit_by_12,soft_edit_by_12,anti_repetition_rules,status_90s_rule,one_check_then_stop,never_bare_pytest,evidence_ledger,test_obligations,call_checkpoints_20_24,reproduce_step,graph_tool_guidance
+5dff4c611a,score-0.12.zip,7,1,1,1,0,0,1,0,1,1,0,0,0,0,0,0,1,1
+cc9391d93c,score-0.12(1).zip,7,1,0,0,0,0,1,0,0,0,1,0,1,1,0,0,1,0
+648d753cca,score-0.12(2).zip,7,1,0,0,0,0,1,1,0,0,1,1,1,0,1,0,0,0
+eccec14fdf,score-0.13.zip,8,1,0,1,0,0,1,0,1,1,0,1,0,0,0,0,0,0
+ce10b18cc8,score-0.13(1).zip,8,1,1,1,0,1,0,1,0,0,1,1,1,0,0,0,0,0
+4cb9c36a16,score-0.15+0.17+0.20,10.3333333333,3,0,0,0,0,0,1,0,0,1,1,1,0,0,0,0,0
+18c77ac6dd,score-0.18.zip,11,1,1,1,1,0,1,0,0,1,0,0,0,0,0,0,1,1
+810e018e21,score-0.18(1).zip,11,1,1,1,1,0,1,0,0,1,0,0,0,0,0,1,1,1

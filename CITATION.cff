@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use ASFA, please cite the accompanying Gemma 4 Developer Agent Paper Track submission."
+title: "Agent Submission Forensics Audit (ASFA)"
+authors:
+  - family-names: Venugopalam
+    given-names: Chukka
+version: 1.0.0
+date-released: 2026-11-11
+license: Apache-2.0

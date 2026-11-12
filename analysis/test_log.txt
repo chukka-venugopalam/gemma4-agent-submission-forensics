@@ -1,0 +1,18 @@
+test_malformed_zip_fails_loudly (test_afsa.AFSATests.test_malformed_zip_fails_loudly) ... ok
+test_member_path_is_part_of_fingerprint (test_afsa.AFSATests.test_member_path_is_part_of_fingerprint) ... ok
+test_missing_archive_fails_loudly (test_afsa.AFSATests.test_missing_archive_fails_loudly) ... ok
+test_payload_changes_when_file_bytes_change (test_afsa.AFSATests.test_payload_changes_when_file_bytes_change) ... ok
+test_same_payload_different_zip_timestamp (test_afsa.AFSATests.test_same_payload_different_zip_timestamp) ... ok
+test_score_mapping_known_values (test_afsa.AFSATests.test_score_mapping_known_values) ... ok
+test_archive_and_payload_counts (test_case_study.CaseStudyTests.test_archive_and_payload_counts) ... ok
+test_core_envelope_output_cap_split_is_disclosed (test_case_study.CaseStudyTests.test_core_envelope_output_cap_split_is_disclosed) ... ok
+test_exploratory_bundled_contrast (test_case_study.CaseStudyTests.test_exploratory_bundled_contrast) ... ok
+test_followup_scores (test_case_study.CaseStudyTests.test_followup_scores) ... ok
+test_repeated_baseline_outcomes (test_case_study.CaseStudyTests.test_repeated_baseline_outcomes) ... ok
+test_invalid_header_rejected (test_lora_audit.LoRAAuditTests.test_invalid_header_rejected) ... ok
+test_zero_B_detected_and_A_nonzero (test_lora_audit.LoRAAuditTests.test_zero_B_detected_and_A_nonzero) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.047s
+
+OK

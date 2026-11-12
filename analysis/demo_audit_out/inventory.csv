@@ -1,0 +1,2 @@
+archive,score,solves_min,solves_max,archive_sha256,content_fingerprint,member_count,model,root_tool_count,root_tools,temperature,top_p,top_k,max_output_tokens,thinking_budget,include_thoughts,max_tool_calls,max_time_minutes,max_turns,timeout_seconds,adapter_dirs
+demo_agent.zip,0.50,29,29,a51e4d7143b7692dc1ca655fe8d94888fadc04acb52f8d48e6748b2629e8b9dc,e0528ea32c70e8b31fe9110bef5db72c359800514f5467fd3296287e15d55c6f,4,example-model,2,read_file;edit_file,0.2,0.95,,8192,4096,true,28,8,80,240,
